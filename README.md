@@ -1,4 +1,6 @@
-### Description of the Steps for Solving the Inverse Kinematics Problem with the Corresponding Simulation Software
+### Steps for Solving the Inverse Kinematics Problem with the Corresponding Simulation Software
+
+This program aims to solve the inverse kinematics problem by providing a user-friendly interface for inputting arm lengths and target positions, and visually simulating the movement of a robotic arm to reach the desired point within its work envelope.
 
 1. **Initial Data Reading**: We need to read the basic data and parameters from the user. 
 These include:
@@ -18,4 +20,4 @@ These include:
 
 7. **Animation Process**: Once the program accepts "correct" coordinates, it will start an animation process, moving the robotic arm in a straight line from the initial to the final position.
 
-This program aims to solve the inverse kinematics problem by providing a user-friendly interface for inputting arm lengths and target positions, and visually simulating the movement of a robotic arm to reach the desired point within its work envelope.
+
