@@ -1,11 +1,12 @@
 Steps for Solving the Inverse Kinematics Problem with the Corresponding Simulation Software
 
-1. Initial Data Reading: We need to read the basic data and parameters from the user. These include:
+1. Initial Data Reading: We need to read the basic data and parameters from the user.
+These include:
 -Lengths L1, L2 (ensure that the values are acceptable so that the robotic arm can be projected within the screen's width and height dimensions).
 -Clockwise or counter-clockwise direction for the final projection.
 -The coordinates x2, y2 of the end of the 2nd segment of the robotic arm (ensure that they are within the external boundary and outside the internal work envelope).
 
-2. Cartesian System Projection Routine: We need a routine to project the Cartesian coordinate system with the horizontal X-axis and the vertical Y-axis, which will be located in the middle of the screen.
+3. Cartesian System Projection Routine: We need a routine to project the Cartesian coordinate system with the horizontal X-axis and the vertical Y-axis, which will be located in the middle of the screen.
 
 2. Work Envelope Projection Routine: We need a routine to project the internal and external work envelope.
 
