@@ -1,46 +1,21 @@
-```markdown
-# Inverse Kinematics Solver
+### Description of the Steps for Solving the Inverse Kinematics Problem with the Corresponding Simulation Software
 
-This software simulates the movement of a robotic arm by solving the inverse kinematics problem. It provides a visual representation of the arm's movement within its work envelope, based on user-defined parameters and target positions.
+1. **Initial Data Reading**: We need to read the basic data and parameters from the user. 
+These include:
+   - Lengths L1, L2 (ensure that the values are acceptable so that the robotic arm can be projected within the screen's width and height dimensions).
+   - Clockwise or counter-clockwise direction for the final projection.
+   - The coordinates x2, y2 of the end of the 2nd segment of the robotic arm (ensure that they are within the external boundary and outside the internal work envelope).
 
-## Features
+2. **Cartesian System Projection Routine**: We need a routine to project the Cartesian coordinate system with the horizontal X-axis and the vertical Y-axis, which will be located in the middle of the screen.
 
-- **Dynamic Input**: Accepts lengths of the robotic arm segments and target coordinates.
-- **Directional Control**: Allows for clockwise or counter-clockwise final arm orientation.
-- **Visual Simulation**: Projects the movement of the robotic arm on a Cartesian plane.
+3. **Work Envelope Projection Routine**: We need a routine to project the internal and external work envelope.
 
-## Getting Started
+4. **Solution Calculation Routine or Functions**: We need a routine or corresponding functions to calculate the two pairs of solutions (x1a,y1a & x1b,y1b), i.e., the counter-clockwise and clockwise solutions.
 
-### Initial Data Reading
+5. **Solution Discrimination**: We must be able to distinguish which of the two pairs of solutions represents the counter-clockwise and which the clockwise solution. Depending on the user's choice in the first step of data entry, we keep the corresponding pair and use it to finally project the robotic arm to the user.
 
-The software requires the user to input the following parameters:
+6. **User Input for Movement**: Next, we need to ask the user for the coordinates xt,yt where they want the robotic arm to move (implying straight-line motion). We must repeatedly check that the coordinates given by the user define a feasible straight-line motion; otherwise, the program should inform the user and request new coordinates.
 
-- `L1`, `L2`: Lengths of the first and second segments of the robotic arm. It is essential to ensure these values allow the arm to be projected within the screen's dimensions.
-- **Direction**: Specify the arm's final projection direction (clockwise or counter-clockwise).
-- `x2`, `y2`: Coordinates of the end of the arm's second segment, which must be within the external boundary and outside the internal work envelope.
+7. **Animation Process**: Once the program accepts "correct" coordinates, it will start an animation process, moving the robotic arm in a straight line from the initial to the final position.
 
-### Cartesian System Projection Routine
-
-A routine projects the Cartesian coordinate system with the horizontal X-axis and the vertical Y-axis at the screen's center.
-
-### Work Space Projection Routine
-
-This routine projects the internal and external work envelope, defining the operational area of the robotic arm.
-
-### Solution Calculation Routine
-
-Functions to calculate two pairs of solutions (`x1a,y1a` & `x1b,y1b`) for the arm's base positions, representing counter-clockwise and clockwise orientations.
-
-### Solution Discrimination
-
-The software distinguishes between the counter-clockwise and clockwise solution pairs. Based on the user's initial choice, it retains the appropriate pair for the final arm projection.
-
-### User Input for Movement
-
-Users specify target coordinates (`xt`, `yt`) for the robotic arm's movement, implying a straight-line motion. The software validates the feasibility of the motion and requests new coordinates if necessary.
-
-### Animation Process
-
-Upon validating the target coordinates, the software animates the robotic arm's movement from the initial position to the final target in a straight line.
-
-
+This program aims to solve the inverse kinematics problem by providing a user-friendly interface for inputting arm lengths and target positions, and visually simulating the movement of a robotic arm to reach the desired point within its work envelope.
